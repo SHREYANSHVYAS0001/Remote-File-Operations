@@ -85,6 +85,26 @@ python secondary_server.py
 - **Write Requests**: Write and append requests are forwarded to the primary server for consistency.
 - **Rename and Delete Requests**: Rename and delete requests are proxied to the primary server for synchronization.
 
+## Load Balancer
+
+The load balancer distributes client requests among secondary servers for improved scalability and fault tolerance.
+
+### Usage
+
+1. Run the load balancer script using the following command:
+```
+python load_balancer.py
+```
+2. The load balancer will run on port 7000 by default.
+
+### Endpoint
+
+- **POST /load_balancer**: Distributes client requests among secondary servers.
+
+### Load Balancing Algorithm
+
+The load balancer uses a simple round-robin algorithm to distribute client requests among secondary servers. Each time a request is received, the load balancer forwards it to the next available secondary server in the list.
+
 ## Client
 
 The client script allows users to interact with the file server.
@@ -95,7 +115,7 @@ The client script allows users to interact with the file server.
 ```
 python client.py
 ```
-2. Upon running, you'll be prompted to enter the server URL (e.g., http://127.0.0.1:5000).
+2. Upon running, you'll be prompted to enter the server URL (e.g., http://127.0.0.1:7000).
 3. Choose from the available actions to interact with the file server.
 
 ### Actions
