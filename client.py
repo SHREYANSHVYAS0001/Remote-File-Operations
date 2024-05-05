@@ -94,7 +94,7 @@ def check_file(filename):
 
 def main():
     global SERVER_URL
-    SERVER_URL = input("Enter the server URL (e.g., http://127.0.0.1:5000): ")
+    SERVER_URL = input("Enter the server URL (e.g., http://127.0.0.1:7000): ")
     connect(SERVER_URL)  # Connect to the server    
 
     while True:
