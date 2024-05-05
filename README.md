@@ -5,8 +5,18 @@ This system consists of a primary server, secondary server, and client scripts f
 ## Installation
 
 1. Ensure you have Python installed on your system.
-2. Install Flask for server scripts and requests library for the client script using the following commands:
-
+2. Clone this repository to your local machine:
+```
+git clone https://github.com/SHREYANSHVYAS0001/Remote-File-Operations.git
+```
+3. Install Flask for server scripts using the following commands:
+```
+pip install flask
+```
+4. Install requests library for the client script using the following commands:
+```
+pip install requests
+```
 
 ## Primary Server
 
@@ -15,7 +25,9 @@ The primary server facilitates file operations and synchronization with secondar
 ### Usage
 
 1. Run the primary server script using the following command:
-
+```
+python primary_server.py
+```
 2. Upon running, you'll be prompted to enter the number of secondary servers and their IP addresses. Enter the required information as prompted.
 3. The primary server will listen for incoming requests on port 6000 by default.
 
@@ -46,7 +58,9 @@ The secondary server synchronizes file operations with the primary server and se
 ### Usage
 
 1. Run the secondary server script using the following command:
-
+```
+python secondary_server.py
+```
 2. Upon running, you'll be prompted to enter the IP address of the primary server.
 3. The secondary server will listen for incoming requests on port 5000 by default.
 
@@ -78,7 +92,9 @@ The client script allows users to interact with the file server.
 ### Usage
 
 1. Run the client script using the following command:
-
+```
+python client.py
+```
 2. Upon running, you'll be prompted to enter the server URL (e.g., http://127.0.0.1:5000).
 3. Choose from the available actions to interact with the file server.
 
